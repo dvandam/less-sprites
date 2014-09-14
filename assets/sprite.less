@@ -4,19 +4,22 @@ body{
 .button {
   border-radius:5px;
   display: inline-block;
-  padding:5px;
   margin:5px;
+  padding:5px;
 
   &:before {
-    background-image: url(../img/icons.jpg);
+    background-image: url(../img/icons.png);
     content: "";
     display: inline-block;
     height: 16px;
+    margin-right: 3px;
+    position: relative;
+    top: 2px;
     width: 16px;
   }
 }
 .button(@color; @left; @top) {
-  background-color: lighten(@color, 10%);
+  background-color: lighten(@color, 20%);
   border: 1px solid @color;
   color: darken(@color, 10%);
 
@@ -25,7 +28,7 @@ body{
   }
 }
 .edit.button {
-  .button(gray; 481px; 174px);
+  .button(gray; 141px; 174px);
 }
 .delete.button{
   .button(red; 606px; 10px);
